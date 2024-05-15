@@ -233,6 +233,37 @@ public class Workbooks {
     System.out.println(result);
   }
 
+  public static void workbook3_7() {
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("*****ROYAL BANK OF JAVA*****");
+    System.out.println("Are you here to get a mortgage? ( y / n )");
+    String isApplyingForMortgage = scanner.nextLine();
+
+    if (isApplyingForMortgage.toLowerCase().equals("y")) {
+      System.out.println("\nGreat! In one line" + 
+        "\nHow much cash assets do you have ( Checkings / Savings )?" +
+        "\nHow much do you owe in total debts?" +
+        "\nHow many years have you been employed?"
+      );
+      
+      int totalAssets = scanner.nextInt();
+      int totalDebts = scanner.nextInt();
+      int yearsEmployed = scanner.nextInt();
+
+      
+      if (totalAssets >= 10000 && totalDebts < 5000 && yearsEmployed >= 2) {
+        System.out.println("What is your name?");
+        scanner.nextLine();
+        String name = scanner.nextLine();
+        System.out.println("\nCongratulations, " + name + "! You have been approved!");
+      } else {
+        System.out.println("\nSorry, you are not eligible for a mortgage at this time.");
+      }
+    }
+    System.out.println("Have a great day.");
+  }
+
   public static void main(String[] args) {
     // workbook1_1();
     // workbook2_1();
@@ -246,5 +277,6 @@ public class Workbooks {
     // workbook3_4();
     // workbook3_5();
     // workbook3_6();
+    workbook3_7();
   }
 }
