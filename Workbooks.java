@@ -108,6 +108,33 @@ public class Workbooks {
     scanner.close();
   }
 
+  public static void workbook3_1() {
+    double change = 3.50;
+    double price = 2.50;
+    System.out.println("Hi Java, do I have enough change to buy chips?");
+    System.out.println("Java: " + (change >= price) + "\n");
+
+    int capacity = 12;
+    int people = 15;
+    System.out.println("Hi Java, can the elevator support everyone?");
+    System.out.println("Java: " + (capacity > people) + "\n");
+
+    String request = "PS5";
+    String purchase = "Toy car";
+    System.out.println("Hi Java, will my friend be happy?");
+    System.out.println("Java: " + (request.equals(purchase)) + "\n");
+
+    int space = 9;
+    int guests = 8;
+    System.out.println("Hi Java, will all my friends fit at the dinner party?");
+    System.out.println("Java: " + (space > guests) + "\n");
+
+    int yourVotes = 24;
+    int competitorVotes = 43;
+    System.out.println("Hi Java, will I win the election?");
+    System.out.println("Java: " + (yourVotes > competitorVotes) + "\n");
+  }
+
   public static void main(String[] args) {
     // workbook1_1();
     // workbook2_1();
@@ -115,5 +142,6 @@ public class Workbooks {
     // workbook2_3();
     // workbook2_4();
     // workbook2_5();
+    workbook3_1();
   }
 }
