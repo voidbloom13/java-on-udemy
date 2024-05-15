@@ -135,6 +135,104 @@ public class Workbooks {
     System.out.println("Java: " + (yourVotes > competitorVotes) + "\n");
   }
 
+  public static void workbook3_2() {
+    double wallet = 100.0;
+    double toyCar = 5.99;
+    double nike = 95.99;
+
+    System.out.println("Can I have this car?");
+    if (wallet - toyCar >= 0) {
+      System.out.println("Sure!");
+      wallet -= toyCar;
+    } else {
+      System.out.println("Sorry, I only have $" + (wallet) + " left.");
+    }
+
+    System.out.println("Can I have these Nike shoes?");
+    if (wallet - nike >= 0) {
+      System.out.println("Sure!");
+      wallet =- nike;
+    } else {
+      System.out.println("Sorry, I only have $" + (wallet) + " left.");
+    }
+  }
+
+  public static void workbook3_3() {
+    int gryffindor = 400;
+    int ravenclaw = 200;
+
+    if (gryffindor - ravenclaw > 299) {
+      System.out.println("Gryffindor wins the championship!");
+    } else if (gryffindor - ravenclaw >= 0) {
+      System.out.println("Gryffindor comes in second place!");
+    } else if (gryffindor - ravenclaw < -99) {
+      System.out.println("Gryffindor takes third place.");
+    } else {
+      System.out.println("Gryffindor places last in the quiddich championships. :(");
+    }
+  }
+
+  public static void workbook3_4() {
+    int temp = 25;
+
+    if (temp >= 22) {
+      System.out.println("It\'s pretty warm out.");
+    } else if (temp > 12) {
+      System.out.println("It\'s pretty cold out.");
+    } else {
+      System.out.println("It\'s freezing. Don\'t go outside.");
+    }
+  }
+
+  public static void workbook3_5() {
+    boolean holiday = false;
+    boolean weekend = true;
+
+    if (!holiday && !weekend) {
+      System.out.println("Get up for your day job.");
+    } else if (holiday) {
+      System.out.println("It\'s a holiday! Take a paid day off.");
+    } else {
+      System.out.println("Enjoy the weekend! :D");
+    }
+  }
+
+  public static void workbook3_6() {
+    String day = "friday";
+    String result;
+
+    System.out.println("Hey! Are you free on " + day + "?");
+    System.out.println("Let me check...");
+
+    switch (day.toLowerCase()) {
+      case "sunday":
+        result = "Sorry, can\'t";
+        break;
+      case "monday":
+        result = "I have work that day.";
+        break;
+      case "tuesday":
+        result = "I have a few hours available.";
+        break;
+      case  "wednesday":
+        result = "Sorry, I have to take some online classes.";
+        break;
+      case "thursday":
+        result = "I have work that day.";
+        break;
+      case "friday":
+        result = "Sure, I can hang out that day.";
+        break;
+      case "saturday":
+        result = "Sure, I can hang out that day.";
+        break;
+      default:
+        result = "I think you have a typo in your code.";
+    }
+
+    System.out.println(result);
+  }
+
   public static void main(String[] args) {
     // workbook1_1();
     // workbook2_1();
@@ -142,6 +240,11 @@ public class Workbooks {
     // workbook2_3();
     // workbook2_4();
     // workbook2_5();
-    workbook3_1();
+    // workbook3_1();
+    // workbook3_2();
+    // workbook3_3();
+    // workbook3_4();
+    // workbook3_5();
+    // workbook3_6();
   }
 }
