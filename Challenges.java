@@ -40,8 +40,81 @@ public class Challenges {
     scanner.close();
   }
 
+  public static void challenge3() {
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("*****TRIVIA CHALLENGE*****");
+    String question1 = "c";
+    String question2 = "a";
+    String question3 = "d";
+    String question4a = "a";
+    String question4b = "b";
+
+    System.out.println("1. Which country held the 2016 Summer Opympics?");
+    System.out.println("\ta: China");
+    System.out.println("\tb: Ireland");
+    System.out.println("\tc: Brazil");
+    System.out.println("\td: Italy");
+    String answer1 = scanner.nextLine().toLowerCase(); // Correct: C
+
+    System.out.println("2: Which planet is the hottest?");
+    System.out.println("\ta: Venus");
+    System.out.println("\tb: Saturn");
+    System.out.println("\tc: Mercury");
+    System.out.println("\td: Mars");
+    String answer2 = scanner.nextLine().toLowerCase(); // Correct: A
+
+    System.out.println("3: What is the rarest blood type?");
+    System.out.println("\ta: O");
+    System.out.println("\tb: A");
+    System.out.println("\tc: B");
+    System.out.println("\td: AB-Negative");
+    String answer3 = scanner.nextLine().toLowerCase(); // Correct: D
+
+    System.out.println("4: Which of these characters are friends with Harry Potter? Choose any correct answer.");
+    System.out.println("\ta: Ron Weasly");
+    System.out.println("\tb: Hermione Granger");
+    System.out.println("\tc: Draco Malfoy");
+    String answer4 = scanner.nextLine().toLowerCase(); // Correct: A or B
+
+    int score = 0;
+    if (answer1.equals(question1)) {
+      score += 5;
+    }
+    if (answer2.equals(question2)) {
+      score += 5;
+    }
+    if (answer3.equals(question3)) {
+      score += 5;
+    }
+    if (answer4.equals(question4a) || answer4.equals(question4b)) {
+      score += 5;
+    }
+
+    switch (score) {
+      case 0:
+        System.out.println("You scored " + score + "/20. Try again after studying.");
+        break;
+      case 5:
+        System.out.println("You scored " + score + "/20. You can do better than this.");
+        break;
+      case 10:
+        System.out.println("You scored " + score + "/20. Half way to a perfect score.");
+        break;
+      case 15:
+        System.out.println("You scored " + score + "/20. Great job!");
+        break;
+      case 20:
+        System.out.println("You scored " + score + "/20. Perfect score!!!");
+        break;
+      default:
+        System.out.println("An Error occurred. Please try again.");
+    }
+  }
+
   public static void main(String[] args) {
     // challenge1();
     // challenge2();
+    challenge3();
   }
 }
